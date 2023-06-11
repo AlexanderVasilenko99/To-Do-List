@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex's To Do List</title>
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/images/icon.png">
+</head>
+
+<body>
+    <h1>Welcome!</h1>
+    <h2>To Alex's To Do List</h2>
+    <div id="form-container">
+
+        <form onsubmit="addTask()" id="form">
+            <label>Details: </label>
+            <div class="text-container"><textarea required minlength="2" maxlength="150" name="" id="text"
+                    rows="10"></textarea>
+            </div>
+            <div class="date-and-time">
+                <label>Due date: </label><input required type="date" id="date" value="" min="">
+                <label>Due time: </label><input required type="time" id="time" value="" min="">
+            </div>
+            <div class="buttons">
+                <button type="submit">Add Task</button>
+                <button type="reset">Clear</button>
+            </div>
+        </form>
+
+    </div>
+    <div>
+        <ul id="task-gallery">
+            <!-- here the html is injected -->
+
+        </ul>
+    </div>
+
+</body>
+
+</html>
