@@ -55,11 +55,16 @@ function addTask() {
     event.preventDefault();
     let text = document.getElementById("text");
     let date = document.getElementById("date");
+    
+    // a conversion from yyyy-mm-dd format to dd-mm-yyyy 
+    let myDate = new Date(date.value);
+    date = myDate.toLocaleDateString("en-GB");
+
     let time = document.getElementById("time");
     let i = alexTasks.length;
     let form = document.getElementById("form");
 
-    let task = { text: text.value, date: date.value, time: time.value, i: i };
+    let task = { text: text.value, date: date, time: time.value, i: i };
     alexTasks.push(task);
 
     saveData();
